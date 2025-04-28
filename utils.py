@@ -2,6 +2,10 @@ import pandas as pd
 import requests
 import re
 
+# wrangle_peptides: Preprocess peptides: clean them (remove PTMs, swap L/I).
+# request_unipept_pept_to_lca:	Batch-submit peptides to Unipept API and retrieve taxonomy.
+# fetch_request: Send HTTP request, handle possible errors robustly.
+
 def request_unipept_pept_to_lca(pept_df: pd.DataFrame,
                                 seq_col: str) -> pd.DataFrame:
     """From a dataset of peptides, fetch lca taxonomy and rank from unipept
@@ -19,7 +23,9 @@ def request_unipept_pept_to_lca(pept_df: pd.DataFrame,
 
     # batch_size defines the amount of peptides to send to unipept in one request
     batch_size = 100
-    seq_series = "&input[]=" + pept_df[seq_col].drop_duplicates()
+    #seq_series = "&input[]=" + pept_df[seq_col].drop_duplicates()
+    seq_series = ["&input[]=" + seq for seq in pept_df[seq_col].drop_duplicates()]
+
     
     # initialize dataframe to store lca
     lca_df = pd.DataFrame(columns=[seq_col, "Global LCA", "Global LCA Rank"], dtype=object)
@@ -97,3 +103,4 @@ def wrangle_peptides(sequence: str,
     if li_swap is True:
         sequence = sequence.replace("L", "I")
     return sequence
+
