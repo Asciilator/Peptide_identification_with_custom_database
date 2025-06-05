@@ -11,3 +11,6 @@ pipelines/**/*.csv
 Community_comparisons/*.fasta
 db_results_analysis/*.fasta
 pipelines/**/*.fasta
+
+echo "pipelines/pipeline_diamond.ipynb" >> .gitignore
+echo "pipelines/pipeline_first.ipynb" >> .gitignore
