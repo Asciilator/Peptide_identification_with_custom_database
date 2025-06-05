@@ -1,6 +1,13 @@
 # Peptide Identification with Custom Database
 
-This project aims to identify peptides from a mass spectrometry (MS) sample using a **custom protein database**, constructed based on MS data itself by running one of the provided pipeline notebooks.
+This project aims to identify proteins matching with peptides from a mass spectrometry (MS) sample and the organisms that express these proteins, using a **custom protein database**, constructed based on de novo peptides from the MS data using PEAKS studio. 
+
+- The database construction process are explained in detail and can be executed in the provided jupyter notebooks in the **pipelines** folder. 
+- The analysis and the taxonomic composition visualisation process of the peptide spectrum matches (PSM) of the tested databases and the determination of the protein overlap between the custom database and metagenome database can be executed and is explained in the notebooks in the **db_results_analysis** folder. 
+- The necesaary files to run the diamond alignment are located in the **software_tools** folder. 
+- The notebooks containing the pipelines for clustering with diamond or with mmseqs2 are found in the **Clustering** folder. 
+- The pipelines for determening taxa overlap with the metagenomics raw and/or psm database and the comparison of the taxa composition plots (stacked bar charts next to each other) between those derived from custom database and those from the metagnomics raw and/or psm database, are provided in the **Community_comparisons** folder. 
+- I saved the results of my research in the **Outputs** folder, but feel free to add your own results to this folder.  
 
 ---
 
@@ -79,7 +86,6 @@ Follow these steps to prepare your system for using the DIAMOND alignment tool:
 Once you've completed the steps above you can run the DIAMOND-based peptide identification and clustering pipelines:
 
 Notebooks:
-- `pipeline_diamond.ipynb`
 - `pipeline_diamond_proteomes.ipynb`
 - `pipeline_diamond_improved.ipynb`
 - `diamond_clustering.ipynb`

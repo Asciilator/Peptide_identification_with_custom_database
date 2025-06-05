@@ -1,7 +1,6 @@
 *.fasta
 *.dmnd
 *.tsv
-*.exe
 
 # Ignore all CSV and FASTA files in selected folders
 Community_comparisons/*.csv
