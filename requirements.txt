@@ -1,0 +1,8 @@
+pandas>=1.5.0
+matplotlib>=3.5
+seaborn>=0.11
+numpy>=1.21
+biopython>=1.79
+ipython>=8.0
+requests
+tqdm

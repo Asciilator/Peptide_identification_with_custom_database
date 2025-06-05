@@ -1,0 +1,25 @@
+[project]
+name = "metaproteomics_pipeline"
+version = "0.1.0"
+description = "A bioinformatics pipeline for microbial taxonomic and functional profiling using MS data."
+authors = [
+    { name="Yusuf Ascibasi", email="yascibasi@tudelft.nl" }
+]
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+
+dependencies = [
+    "pandas>=1.5.0",
+    "matplotlib>=3.5",
+    "seaborn>=0.11",
+    "numpy>=1.21",
+    "biopython>=1.79",
+    "ipython>=8.0",
+    "requests",
+    "tqdm"
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
