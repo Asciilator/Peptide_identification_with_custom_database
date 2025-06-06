@@ -1,7 +1,7 @@
 [project]
 name = "metaproteomics_pipeline"
 version = "0.1.0"
-description = "A bioinformatics pipeline for microbial taxonomic and functional profiling using MS data."
+description = "A bioinformatics pipeline for microbial taxonomic profiling and a sample specific database construction using MS data."
 authors = [
     { name="Yusuf Ascibasi", email="yascibasi@tudelft.nl" }
 ]
@@ -16,6 +16,7 @@ dependencies = [
     "numpy>=1.21",
     "biopython>=1.79",
     "ipython>=8.0",
+    "ete3>=3.1.2",
     "requests",
     "tqdm"
 ]

@@ -168,6 +168,7 @@ If you encounter errors:
 
 - Double-check that all file paths are correct. This might be the most prominent reason for errors, since you might have organised your project folders and named your files differently than how I did.  
 - You might use my code where I define file paths with the variable base_path. However, if you want to ensure that no file path related errors might occur, use raw strings for Windows paths in Python (`r"C:\Path\..."`). 
+- Make sure you installed all the required packages from the requirements.txt file.
 - Ensure WSL is installed and that `mmseqs` runs correctly in a WSL terminal
 - Make sure `diamond.exe` is located in the project folder when using DIAMOND
 
